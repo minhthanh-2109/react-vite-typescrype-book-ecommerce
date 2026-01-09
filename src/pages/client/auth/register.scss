@@ -1,0 +1,60 @@
+.register-page {
+    background: #f3f5f7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-page .main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.register-page .container {
+    width: 420px;
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.register-page .wrapper .heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-page h2.text-large {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.register-page .ant-form-item-label>label {
+    font-weight: 600;
+}
+
+.register-page input,
+.register-page .ant-input,
+.register-page .ant-input-password {
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.register-page button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.register-page .ant-divider {
+    margin: 20px 0;
+}
+
+.register-page p.text-normal {
+    margin-top: 10px;
+    font-size: 14px;
+}

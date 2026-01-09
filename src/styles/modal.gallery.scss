@@ -1,0 +1,56 @@
+.modal-gallery {
+    .thumbnail-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .thumb-item {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        cursor: pointer;
+        overflow: hidden;
+
+        .item-img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        /* Hover preview */
+        &:hover .item-img {
+            // transform: scale(1.04);
+            content: "";
+            position: absolute;
+            inset: 0; // sát tuyệt đối viền ảnh
+            border-radius: 8px;
+            border: 2px solid #1677ff;
+            // opacity: 0;
+            // transform: scale(1);
+            // transition: all 0.2s ease;
+            pointer-events: none;
+        }
+
+        /* Active border giống ImageGallery */
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0; // sát tuyệt đối viền ảnh
+            border-radius: 8px;
+            border: 2px solid #1677ff;
+            opacity: 0;
+            transform: scale(1);
+            transition: all 0.2s ease;
+            pointer-events: none;
+        }
+
+        &.is-active::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}

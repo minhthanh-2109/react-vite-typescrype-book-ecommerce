@@ -1,0 +1,83 @@
+.user-info-modal {
+    padding: 16px 8px;
+
+    .ant-row {
+        width: 100%;
+    }
+
+    /* ========= LEFT: AVATAR ========= */
+    .avatar-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; // center ngang
+        justify-content: center; // center dọc (quan trọng)
+        text-align: center;
+        padding: 24px 16px;
+        min-height: 100%;
+
+        .ant-avatar {
+            margin-bottom: 16px;
+        }
+
+        .ant-upload {
+            width: 100%;
+            max-width: 260px; // tránh nút upload quá dài
+        }
+    }
+
+    /* ========= RIGHT: FORM ========= */
+    .form-section {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        margin-left: auto; // đẩy về phải, tạo khoảng thở
+        max-width: 480px; // form gọn, không quá to
+
+        .ant-form-item {
+            margin-bottom: 14px;
+        }
+
+        .ant-form-item-label>label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        input {
+            border-radius: 8px;
+            height: 40px;
+        }
+
+        button[type="submit"] {
+            margin-top: 8px;
+            width: 100%;
+            height: 44px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+    }
+
+    /* ========= RESPONSIVE ========= */
+
+    /* Tablet & below */
+    @media (max-width: 768px) {
+        .avatar-section {
+            padding-bottom: 16px;
+        }
+
+        .form-section {
+            margin-left: 0;
+            max-width: 100%;
+        }
+    }
+
+
+    /* Mobile */
+    @media (max-width: 576px) {
+        .form-section {
+            box-shadow: none;
+            padding: 0;
+        }
+    }
+}
