@@ -232,7 +232,9 @@ const HomePage = () => {
                                                 placeholder="đ From"
                                                 formatter={(value) =>
                                                     `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
-                                                parser={(value) => `${value}`.replace(/\./g, "")}>
+                                            // parser={(value) => `${value}`.replace(/\./g, "") 
+                                            // }
+                                            >
                                             </InputNumber>
                                         </Form.Item>
                                         <span> - </span>
@@ -243,7 +245,8 @@ const HomePage = () => {
                                                 placeholder="đ To"
                                                 formatter={(value) =>
                                                     `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
-                                                parser={(value) => `${value}`.replace(/\./g, "")}>
+                                            // parser={(value) => `${value}`.replace(/\./g, "")}
+                                            >
                                             </InputNumber>
                                         </Form.Item>
 
