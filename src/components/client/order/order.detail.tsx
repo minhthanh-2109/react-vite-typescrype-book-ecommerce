@@ -1,6 +1,7 @@
 import { useCurrentApp } from "@/components/context/app.context";
 import { DeleteTwoTone } from "@ant-design/icons";
 import { Button, Col, Divider, InputNumber, message, Popconfirm, Row } from "antd";
+import { PopconfirmProps } from "antd/lib";
 import { useEffect, useState } from "react";
 import { BsCartPlus } from "react-icons/bs";
 import 'styles/order.detail.scss';
@@ -26,7 +27,7 @@ const OrderDetail = (props: IProps) => {
     }, [carts]);
     const [messageApi, holder] = message.useMessage()
 
-    const cancel: PopconfirmProps['onCancel'] = (e) => {
+    const cancel: PopconfirmProps['onCancel'] = () => {
         // console.log(e);
         messageApi.error('Delete cancel');
     };

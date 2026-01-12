@@ -1,4 +1,4 @@
-import { deleteBookAPI, deleteUserAPI, getBookAPI } from '@/services/api';
+import { deleteBookAPI, getBookAPI } from '@/services/api';
 import { dateRangeValidate } from '@/services/helper';
 import { DeleteTwoTone, EditTwoTone, PlusOutlined, ExportOutlined } from '@ant-design/icons';
 import type { ActionType, ProColumns } from '@ant-design/pro-components';
@@ -10,6 +10,7 @@ import dayjs from 'dayjs';
 import BookDetail from './book.detail';
 import AddNewBook from './add.new.book';
 import UpdateBook from './update.book';
+import { PopconfirmProps } from 'antd/lib';
 
 type TSearch = {
     mainText: string,
@@ -40,7 +41,7 @@ const TableBook = () => {
 
     const [messageApi, holder] = message.useMessage()
 
-    const cancel: PopconfirmProps['onCancel'] = (e) => {
+    const cancel: PopconfirmProps['onCancel'] = () => {
         // console.log(e);
         messageApi.error('Delete cancel');
     };
