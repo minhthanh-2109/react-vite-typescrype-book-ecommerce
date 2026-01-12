@@ -81,7 +81,6 @@ const BookClientDetail = (props: IProps) => {
     }
 
     const handleAddToCart = (isBuyNow = false) => {
-        debugger
         if (!currentUser) {
             message.error("Please login to add item to cart");
             return;
@@ -105,9 +104,9 @@ const BookClientDetail = (props: IProps) => {
             //sync react context
             setCarts(carts)
         } else {
-            const data = [{
+            const data: ICart[] = [{
                 quantity: currentQuantity,
-                _id: book?._id,
+                _id: book!._id,
                 bookDetail: book!
             }]
             localStorage.setItem("carts", JSON.stringify(data));

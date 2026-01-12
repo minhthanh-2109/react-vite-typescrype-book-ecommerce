@@ -270,10 +270,10 @@ const UpdateBook = (props: IProps) => {
                                     style={{ width: "100%" }}
                                     placeholder="Price"
                                     addonAfter="đ"
-                                    formatter={(value) =>
-                                        value?.replace(/\B(?=(\d{3})+(?!\d))/g, ".")
-                                    }
-                                    parser={(value) => value!.replace(/\./g, "")}
+                                // formatter={(value) =>
+                                //     value?.replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+                                // }
+                                // parser={(value) => value!.replace(/\./g, "")}
                                 />
                             </Form.Item>
                         </Col>

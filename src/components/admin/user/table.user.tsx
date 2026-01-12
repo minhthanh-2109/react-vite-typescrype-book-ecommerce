@@ -11,6 +11,7 @@ import ImportUser from 'components/admin/user/import.user';
 import { CSVLink } from 'react-csv';
 import UpdateUser from 'components/admin/user/update.user';
 import dayjs from 'dayjs';
+import { PopconfirmProps } from 'antd/lib';
 
 type TSearch = {
     fullName: string,
@@ -41,8 +42,8 @@ const TableUser = () => {
 
     const [messageApi, holder] = message.useMessage()
 
-    const cancel: PopconfirmProps['onCancel'] = (e) => {
-        console.log(e);
+    const cancel: PopconfirmProps['onCancel'] = () => {
+        // console.log(e);
         messageApi.error('Delete cancel');
     };
     const handleDeleteUser = async (_id: string) => {

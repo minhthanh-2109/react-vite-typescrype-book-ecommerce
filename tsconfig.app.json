@@ -45,6 +45,7 @@
     "allowJs": true
   },
   "include": [
-    "src"
+    "src",
+    "file.t.ts"
   ]
 }
